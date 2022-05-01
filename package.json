@@ -1,0 +1,30 @@
+{
+  "name": "react-starting-point",
+  "scripts": {
+    "dev": "concurrently npm:dev:client npm:dev:server",
+    "dev:client": "cd client && npm run dev",
+    "dev:server": "cd server && npm run dev",
+    "prepare": "husky install"
+  },
+  "type": "module",
+  "devDependencies": {
+    "concurrently": "^7.1.0",
+    "husky": "^7.0.4",
+    "parcel": "^2.2.0",
+    "prettier": "^2.6.2"
+  },
+  "dependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "engines": {
+    "node": "16.13.x",
+    "npm": ">= 8.1.x"
+  },
+  "description": "This is a minimal React project using Parcel that you should be able to get up and running.",
+  "version": "1.0.0",
+  "main": "index.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
