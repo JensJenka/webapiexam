@@ -1,5 +1,7 @@
 This is a minimal React project using Parcel that you should be able to get up and running.
 
+Fix Heroku cli for f sake
+
 To use:
 
 1. `npm install`
