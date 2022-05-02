@@ -7,8 +7,12 @@ function FrontPage() {
     <div>
       <h1>Jenseste Database</h1>
       <div>
-        <Link to={"/login"}>Login</Link>
-        <Link to={"/register"}>Register new user</Link>
+        <div>
+          <Link to={"/login"}>Login</Link>
+        </div>
+        <div>
+          <Link to={"/register"}>Register new user</Link>
+        </div>
       </div>
     </div>
   );
