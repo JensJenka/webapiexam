@@ -15,14 +15,34 @@ function LoginLinks() {
   );
 }
 
+class HttpError extends Error {
+  constructor(status, statusText) {
+    super("HTTP Jenka-Error: " + statusText);
+    this.status = status;
+  }
+}
+
+async function fetchJSON(url) {
+  const res = await fetch(url);
+  if (res.status === 204) {
+    return null;
+  } else if (res.ok) {
+    return await res.json();
+  } else {
+    throw new HttpError(res.status, res.statusText);
+  }
+}
+
 function FrontPage() {
   const [loading, setLoading] = useState(true);
   const [user, setUser] = useState();
   useEffect(async () => {
     setLoading(true);
-    const res = await fetch("/api/login");
-    setUser(await res.json());
-    setLoading(false);
+    try {
+      setUser(await fetchJSON("/api/login"));
+    } finally {
+      setLoading(false);
+    }
   }, []);
 
   if (loading) {

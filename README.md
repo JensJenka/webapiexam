@@ -2,6 +2,13 @@ This is a minimal React project using Parcel that you should be able to get up a
 
 Fix Heroku cli for f sake
 
+
+
+res.json({
+username: "admin",
+fullName: "Jenseste Jenka",
+});
+
 To use:
 
 1. `npm install`
