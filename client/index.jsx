@@ -64,7 +64,22 @@ function FrontPage() {
 }
 
 function Login() {
-  return <h1>Hello my dear, this is login</h1>;
+  return (
+    <form>
+      <h1>
+        Hello my dear, this is login<br></br> Please log in:
+      </h1>
+      <div>
+        Username: <input type="text" />
+      </div>
+      <div>
+        Password: <input type="password" />
+      </div>
+      <div>
+        <button>Log in</button>
+      </div>
+    </form>
+  );
 }
 
 function Application() {
